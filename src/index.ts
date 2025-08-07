@@ -1,17 +1,23 @@
-import * as dotenv from "dotenv";
-dotenv.config();
+import { loadEnvironment } from "./utils/envLoader";
+
+// Load environment variables
+const env = loadEnvironment();
 
 import { getRelevantCases } from "./vectorstore/pineconeClient";
-import { summarizeCases } from "./llm/summarizer";
+// import { summarizeCases } from "./llm/summarizer";
 
 const run = async () => {
   const query = "Are non-compete clauses enforceable in California?";
 
-  const retrieved = await getRelevantCases(query);
-  const summary = await summarizeCases(query, retrieved);
+  // Initialize Pinecone first
+  const { initializePinecone } = await import("./vectorstore/pineconeClient");
+  await initializePinecone();
 
-  console.log("🧾 Summary:");
-  console.log(summary);
+  const retrieved = await getRelevantCases(query);
+  // const summary = await summarizeCases(query, retrieved);
+
+  console.log("🧾 Retrieved Cases:");
+  console.log(retrieved);
 };
 
 run();

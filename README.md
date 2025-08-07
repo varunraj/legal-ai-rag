@@ -52,12 +52,21 @@ npm install
 
 ### 3. Set up environment variables
 
-Create a `.env` file:
+Copy the template and add your API keys:
+
+```bash
+# Copy template
+cp env.template .env.development
+
+# Edit with your real API keys
+nano .env.development
+```
+
+Required environment variables:
 
 ```env
 OPENAI_API_KEY=your-openai-key
 PINECONE_API_KEY=your-pinecone-key
-PINECONE_ENVIRONMENT=your-env (e.g. us-west1-gcp)
 PINECONE_INDEX=legal-case-index
 ```
 

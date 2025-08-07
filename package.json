@@ -1,13 +1,15 @@
 {
   "name": "legal-ai-rag",
   "version": "1.0.0",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup-pinecone": "node scripts/setup-pinecone.js",
     "check-pinecone": "node scripts/check-pinecone-env.js",
-    "debug-pinecone": "node scripts/debug-pinecone.js"
+    "debug-pinecone": "node scripts/debug-pinecone.js",
+    "dev": "NODE_ENV=development npx ts-node --project tsconfig.json src/index.ts",
+    "start": "NODE_ENV=production npx ts-node --project tsconfig.json src/index.ts",
+    "dev:debug": "NODE_ENV=development DEBUG=* npx ts-node --project tsconfig.json src/index.ts"
   },
   "keywords": [],
   "author": "",
