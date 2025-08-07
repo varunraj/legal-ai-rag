@@ -1,4 +1,4 @@
-# ⚖️ AI Legal Research Assistant (TypeScript)
+# ⚖️ AI Legal Research Assistant
 
 A Retrieval-Augmented Generation (RAG) prototype that helps attorneys find relevant legal precedents from public case law databases, using OpenAI's LLMs and vector search (Pinecone).
 
@@ -6,7 +6,6 @@ This project is designed to demonstrate:
 
 - Practical AI integration using TypeScript
 - Prompt engineering, retrieval, and evaluation
-- Hands-on technical PM skills in the GenAI product space
 
 ---
 
@@ -102,7 +101,7 @@ npx ts-node src/index.ts
 ## 👤 Author
 
 **Varun Raj**  
-Technical Product Manager exploring GenAI-powered tools
+Technical Product Manager
 
 ---
 
