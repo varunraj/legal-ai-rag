@@ -100,7 +100,7 @@ npx ts-node src/index.ts
 
 ## 👤 Author
 
-**Varun Raj**  
+**[Varun Raj](https://www.linkedin.com/in/varunraj537/)**  
 Technical Product Manager
 
 ---
