@@ -103,9 +103,9 @@ class PineconeClient {
 
   private async getQueryEmbedding(query: string): Promise<number[]> {
     // TODO: Implement proper embedding using OpenAI
-    // For now, return a dummy embedding (1536 dimensions for text-embedding-ada-002)
+    // For now, return a dummy embedding (1024 dimensions for Pinecone)
     console.log(`🔍 Embedding query: "${query}"`);
-    return new Array(1536).fill(0).map(() => Math.random() - 0.5);
+    return new Array(1024).fill(0).map(() => Math.random() - 0.5);
   }
 }
 

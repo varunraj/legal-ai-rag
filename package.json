@@ -1,9 +1,13 @@
 {
   "name": "legal-ai-rag",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup-pinecone": "node scripts/setup-pinecone.js",
+    "check-pinecone": "node scripts/check-pinecone-env.js",
+    "debug-pinecone": "node scripts/debug-pinecone.js"
   },
   "keywords": [],
   "author": "",
